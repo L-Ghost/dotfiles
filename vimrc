@@ -46,3 +46,24 @@ set tabstop=2
 set softtabstop=2 " tab == 2 spaces
 set shiftwidth=2 " autoindent with 2 spaces
 set expandtab
+
+" plugin manager - Vundler
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" file search plugin
+Plugin 'rking/ag.vim'
+" colorful code () [] {} plugin
+Plugin 'frazrepo/vim-rainbow'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" vim-rainbow
+let g:rainbow_active = 1
