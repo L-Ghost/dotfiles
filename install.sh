@@ -6,6 +6,9 @@ sudo apt-get update
 sudo apt-get -y install vim
 sudo apt-get -y install tmux
 
+# silver searcher (required for Ag VIM plugin)
+sudo apt-get -y install silversearcher-ag
+
 echo "ROOT commands ended"
 
 echo "installing vim-plug"
