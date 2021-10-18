@@ -1,12 +1,17 @@
 #!/bin/sh
 
 echo "running commands as ROOT"
-sudo -- -sh -c <<EOF
-apt-get update
-apt-get -y install vim
-apt-get -y install tmux
+
+sudo apt-get update
+sudo apt-get -y install vim
+sudo apt-get -y install tmux
+
 echo "ROOT commands ended"
-EOF
+
+echo "installing vim-plug"
+mkdir -p ~/.vim/autoload
+curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > ~/.vim/autoload/plug.vim
+
 
 BASEDIR=$(dirname "$0")
 DOTFILES_DIR=$PWD/$BASEDIR
